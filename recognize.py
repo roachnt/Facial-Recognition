@@ -8,10 +8,10 @@ import face_recognition
 from PIL import Image
 
 # Get haar cascade file
-cascPath = "haarcascade_frontalface_default.xml"
+cascPath = "haarcascades/haarcascade_frontalface_default.xml"
 
 # Get my picture
-picture_of_me = face_recognition.load_image_file("picture_of_me.jpg")
+picture_of_me = face_recognition.load_image_file("img/picture_of_me.jpg")
 
 # Encode face
 my_face_encoding = face_recognition.face_encodings(picture_of_me)[0]
