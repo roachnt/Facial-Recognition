@@ -19,7 +19,7 @@ picture_of_me = face_recognition.load_image_file("img/picture_of_me.jpg")
 # Encode face
 my_face_encoding = face_recognition.face_encodings(picture_of_me)[0]
 
-# Create the haar cascadeOB
+# Create the haar cascade
 faceCascade = cv2.CascadeClassifier(cascPath)
 
 # Get webcam video, width, height
@@ -70,9 +70,7 @@ while True:
     # Display the resulting frame
     cv2.imshow('Facial Recognition Application', frame)
 
-                
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    cv2.waitKey(1)
 
 # When everything is done, release the capture
 video_capture.release()
